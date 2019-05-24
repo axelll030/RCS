@@ -48,47 +48,40 @@ namespace D4
 
         static void SkaitlaMinesana()
         {
-            int[] numberArray = { 1, 15, 89, 46, 22, 99, 7, 66 };
+            int[] numberArray = { 1, };
             //int numberToGuess = new Random().Next(1, 1000+1) - lai tukstotis ieskaitotu
             Random rand = new Random();
             int index1 = rand.Next(numberArray.Length);
             int numberToGuess = numberArray[index1];
-            bool riddleSolved = false;
-
-            do
+  
+            int meginajumi = 0;
+            while (meginajumi < 5)
             {
-                int meginajumi = 0;
-                while (true)
+                Console.Write("Miniet skaitli: ");
+                int inputNumber = int.Parse(Console.ReadLine());
+                if (inputNumber == numberToGuess)
                 {
-                    Console.Write("Miniet skaitli: ");
-                    int inputNumber = int.Parse(Console.ReadLine());
-                    if (inputNumber == numberToGuess)
-                    {
-                        Console.Write(System.Environment.NewLine);
-                        Console.Write("Pareizi!");
-                        riddleSolved = true;
-                    }
-                    else if (inputNumber > numberToGuess)
-                    {
-                        Console.WriteLine("Jusu ievadijat parak lielo skaitli!");
-                        Console.Write(System.Environment.NewLine);
-                    }
-                    else if (inputNumber < numberToGuess)
-                    {
-                        Console.WriteLine("Jusu ievadijat parak mazu skaitli!");
-                        Console.Write(System.Environment.NewLine);
-                        Console.Write(System.Environment.NewLine);
-                    }
-                    
-                    meginajumi++;
-                    if (meginajumi >= 2)
-                    {
-                        Console.WriteLine("Jums beidzas meginajumi!");
-                        break;
-                    }
+                    Console.Write(System.Environment.NewLine);
+                    Console.Write("Pareizi!");
+                    break;
                 }
+                else if (inputNumber > numberToGuess)
+                {
+                    Console.WriteLine("Jusu ievadijat parak lielo skaitli!");
+                    Console.Write(System.Environment.NewLine);
+                }
+                else if (inputNumber < numberToGuess)
+                {
+                    Console.WriteLine("Jusu ievadijat parak mazu skaitli!");
+                    Console.Write(System.Environment.NewLine);
+                    Console.Write(System.Environment.NewLine);
+                }
+                meginajumi++;
             }
-            while (!riddleSolved);
+            if (meginajumi == 5)
+            {
+                Console.WriteLine("Jums beidzas meginajumi!");
+            }    
         }
     }
 }
