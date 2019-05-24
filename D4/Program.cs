@@ -77,6 +77,7 @@ namespace D4
                     {
                         Console.WriteLine("Jusu ievadijat parak mazu skaitli!");
                         Console.Write(System.Environment.NewLine);
+                        Console.Write(System.Environment.NewLine);
                     }
                     
                     meginajumi++;
