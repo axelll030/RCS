@@ -12,7 +12,8 @@ namespace D4
         {
             //Uzdevums1();
             //Uzdevums2();
-            SkaitlaMinesana();
+            //SkaitlaMinesana();
+            Diamond();
             Console.ReadLine();
         }
 
@@ -82,6 +83,16 @@ namespace D4
             {
                 Console.WriteLine("Jums beidzas meginajumi!");
             }    
+        }
+
+        static void Diamond()
+        {
+            Console.Write("Ievadiet skaitli: ");
+            int rinduSkaits = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= rinduSkaits; i++)
+            {
+                Console.WriteLine();
+            }
         }
     }
 }
