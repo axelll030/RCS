@@ -88,9 +88,39 @@ namespace D4
         static void Diamond()
         {
             Console.Write("Ievadiet skaitli: ");
-            int rinduSkaits = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= rinduSkaits; i++)
+            int N = int.Parse(Console.ReadLine());
+
+            /*
+               *    r=1, a=2=N-r, z=1=2*r-1
+              ***   r=2, a=1, z=3
+             *****  r=3, a=0, z=5
+              ***   r=2, 
+               *    r=1,
+             */
+
+            for (int r = 1; r <= N; r++)
             {
+                for (int a = 1; a <= N-r; a++)
+                {
+                    Console.Write(" ");
+                }
+                for (int z = 1; z <= 2*r-1; z++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            for (int r = N - 1; r >= 1; r--)
+            {
+                for (int a = 1; a <= N - r; a++)
+                {
+                    Console.Write(" ");
+                }
+                for (int z = 1; z <= 2 * r - 1; z++)
+                {
+                    Console.Write("*");
+                }
                 Console.WriteLine();
             }
         }
