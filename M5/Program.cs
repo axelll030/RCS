@@ -12,8 +12,7 @@ namespace M5
         {
             //Uzdevums1();
             //Uzdevums2();
-            //Uzdevums3();
-            Uzdevums4Diamond();
+            Uzdevums3();
             Console.ReadLine();
         }
 
@@ -57,6 +56,15 @@ namespace M5
             }
 
             Console.WriteLine("sum{0} -> {1}", skaitlis, summa);
+
+            //vareja ari:
+
+            //sum = 0;
+            //while (n != 0)
+            //{
+            //    sum += n % 10;
+            //    n /= 10;
+            //}
         }
 
         static void Uzdevums3()
@@ -65,31 +73,30 @@ namespace M5
 
             while (true)
             {
-                Console.Write("Ievadiet skaitli ('0101' lai partrauktu): ");
-                int ievade = int.Parse(Console.ReadLine());
+                Console.Write("Ievadiet skaitli ('stop' lai partrauktu): ");
+                string ievade = Console.ReadLine();
 
-                if (ievade == 0101)
+                if (ievade == "stop")
                 {
                     break; //partraukt ciklu
                 }
                 else
                 {
-                    skaitli.Add(ievade);
+                    int ievadeSk = int.Parse(ievade);
+                    skaitli.Add(ievadeSk);
                 }
             }
+
+            // vai pareizi ??? skaitli.First() == skaitli.Last() ? "firstlast Skaitli {0} un {1} sakrit!", skaitli.First(), skaitli.Last() : "firstlast Skaitli {0} un {1} sakrit!", skaitli.First(), skaitli.Last()
+            //ar iso if
             if (skaitli.First() == skaitli.Last())
             {
-                Console.WriteLine("firstast Skailti {0} un {1} sakrit!", skaitli.First(), skaitli.Last());
+                Console.WriteLine("firstlast Skaitli {0} un {1} sakrit!", skaitli.First(), skaitli.Last());
             }
             else
             {
-                Console.WriteLine("firstast Skailti {0} un {1} nesakrit!", skaitli.First(), skaitli.Last());
+                Console.WriteLine("firstlast Skaitli {0} un {1} nesakrit!", skaitli.First(), skaitli.Last());
             }
-        }
-
-        static void Uzdevums4Diamond()
-        {
-
         }
     }
 }
