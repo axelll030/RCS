@@ -11,7 +11,7 @@ namespace DzerienuAutomats
         //properties
         public double IemaksataSumma;
 
-        //constr
+        //constructor
         public DzerienuAutomats()
         {
             IemaksataSumma = 0;
@@ -24,12 +24,13 @@ namespace DzerienuAutomats
             return IemaksataSumma;
         }
 
-        public double PirktDzerienu()
+        public string PirktDzerienu()
         {
             if (IemaksataSumma >= 0.80)
             {
                 double atlikums = IemaksataSumma - 0.80;
-                return atlikums;
+                string atlikumsStr = atlikums.ToString();
+                return atlikumsStr;
             }
             else
             {
@@ -38,6 +39,12 @@ namespace DzerienuAutomats
             }
         }
 
+        public string SanemtAtlikumu()
+        {
+            double atlikums = IemaksataSumma - 0.80;
+            IemaksataSumma = 0;
+            string atlikumsStr = atlikums.ToString();
+            return atlikumsStr;
+        }
     }
-
 }
