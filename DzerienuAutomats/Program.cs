@@ -20,7 +20,7 @@ namespace DzerienuAutomats
 
             string[] menuArray = { "Iemaksat", "Pirkt Dzerienu", "Sanemt Atlikumu" };
             Console.WriteLine("VENDING MACHINE");
-            Console.WriteLine(Environment.NewLine);
+            Console.Write(Environment.NewLine);
             for (int i = 0; i < menuArray.Length; i++)
             {
                 Console.WriteLine(menuArray[i]);
@@ -59,7 +59,6 @@ namespace DzerienuAutomats
                         break;
                 }
             }
-
         }   
     }
 }

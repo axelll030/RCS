@@ -24,16 +24,19 @@ namespace DzerienuAutomats
             return IemaksataSumma;
         }
 
-        public string PirktDzerienu()
+        public string PirktDzerienu()   //ari var izmantot void ja drikst neizvadit iemaksatu summu
         {
             if (IemaksataSumma >= 0.80)
             {
+                //IemaksataSumma -= 0.80;
+                //Console.WriteLine("Tava iemaksata summa {0}", IemaksataSumma);
                 double atlikums = IemaksataSumma - 0.80;
                 string atlikumsStr = atlikums.ToString();
                 return atlikumsStr;
             }
             else
             {
+                //Console.WriteLine("Nepietiek lidzeklu!");
                 string nepietiekLidzeklu = "Jums nepietiek lidzeklu!";
                 return nepietiekLidzeklu;
             }
@@ -41,7 +44,9 @@ namespace DzerienuAutomats
 
         public string SanemtAtlikumu()
         {
-            double atlikums = IemaksataSumma - 0.80;
+            //Console.WriteLine("Tu sanemi {0}", IemaksataSumma);
+            //IemaksataSumma = 0;
+            double atlikums = IemaksataSumma;
             IemaksataSumma = 0;
             string atlikumsStr = atlikums.ToString();
             return atlikumsStr;
