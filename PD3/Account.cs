@@ -13,6 +13,10 @@ namespace PD3
         public string currency;
         public double totalSum;
 
+        //public string getBalance;
+        //public string currency;
+        //public double totalSum;
+
         //constructor
         public Account()
         {
