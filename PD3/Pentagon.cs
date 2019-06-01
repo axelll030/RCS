@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PD3
 {
-    class Pentagon
+    class Pentagon :IDaudzsturis
     {
         //properties
-        public int Mala;
+        public double Mala;
         //constructor
-        public Pentagon(int m1)
+        public Pentagon(double m1)
         {
             Mala = m1;
         }
@@ -28,7 +28,7 @@ namespace PD3
             return A;
         }
 
-        public int Perimeter()
+        public double Perimeter()
         {
             return Mala * 5;
         }

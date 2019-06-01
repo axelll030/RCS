@@ -20,18 +20,5 @@ namespace PD3
             uzvards = uz;
             dzimums = dz;
         }
-        //methods
-        public string Vards()
-        {
-            return vards;
-        }
-        public string Uzvards()
-        {
-            return uzvards;
-        }
-        public string Dzimums()
-        {
-            return dzimums;
-        }
     }
 }

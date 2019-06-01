@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace PD3
 {
-    class Square
+    class Square : IDaudzsturis
     {
         //properties
-        public int Mala;
+        public double Mala;
         //constructor
-        public Square(int m1)
+        public Square(double m1)
         {
             Mala = m1;
         }
         //methods
-        public int Area()
+        public double Area()
         {
             return Mala * Mala;
         }
 
-        public int Perimeter()
+        public double Perimeter()
         {
             return Mala * 4;
         }

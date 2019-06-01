@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B2FD4079-56E7-46AA-B56A-BF1FEC75B190}</ProjectGuid>
+    <ProjectGuid>{8DF9493B-6F63-49BA-B9CD-A8145995FC87}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PD3</RootNamespace>
-    <AssemblyName>PD3</AssemblyName>
+    <RootNamespace>Karatavas</RootNamespace>
+    <AssemblyName>Karatavas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Organisation.cs" />
+    <Compile Include="Karatavas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

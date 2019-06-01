@@ -9,40 +9,51 @@ namespace PD3
     class Account
     {
         //properties
-        public string getBalance;
-        public string currency;
-        public double totalSum;
-
-        //public string getBalance;
-        //public string currency;
-        //public double totalSum;
+        public string Currency;
+        public Client Client;
+        public decimal Summa;
 
         //constructor
-        public Account()
+        public Account(string currency)
         {
-            totalSum = 0;
+            Currency = currency;
+            Summa = 0;
         }
 
         //methods
+
         public string GetBalance()
         {
-            getBalance = totalSum.ToString();
-            return getBalance;
+            return String.Format("{0} {1}", Currency, Summa); //atgriezt ka ja butu writeline formata
         }
-            public double Deposit(double summa)
+
+        public void Deposit(decimal summa)
         {
-            totalSum += summa;
-            return totalSum;
-        }
-        public void Withdraw(double summa)
-        {
-            if (totalSum >= summa)
+            if (summa > 10000)
             {
-                totalSum -= summa;
+                Console.WriteLine("Viena reze nedrkst iemaksat vairak ka 10000EUR!");
             }
             else
             {
+                Summa += summa;
+                Console.WriteLine("Konta iemaksats {0}!", summa);
+            }
+        }
+
+        public void Withdraw(decimal summa)
+        {
+            if (summa > Summa)
+            {
                 Console.WriteLine("Konta nepietiek lidzeklu!");
+            }
+            else if (summa > 500)
+            {
+                Console.WriteLine("Viena reze nedrkst nonemt vairak ka 500EUR!");
+            }
+            else
+            {
+                Summa -= summa;
+                Console.WriteLine("No konta iznemts {0}!", summa);
             }
         }
     }

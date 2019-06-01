@@ -160,14 +160,6 @@ namespace PD1
             string wordToGuess = vardiArray[index1];
             char[] wordToGuessArray = wordToGuess.ToCharArray();
             bool riddleSolved = false;
-
-            //Console.Write("CHECK: ");
-            //for (int i = 0; i < wordToGuessArray.Length; i++)
-            //{
-            //    Console.Write(wordToGuessArray[i]);
-            //}
-            
-            //creating empty array with "-", to fill in later on as user guesses letters
             int index2 = wordToGuessArray.Length;
             string[] emptyArrayToFill = new String[index2];
             for (int i = 0; i < emptyArrayToFill.Length; i++)
@@ -224,8 +216,7 @@ namespace PD1
                 }
             }
             //...vards nebus pilnigi uzminets
-            while (riddleSolved == false);
+            while (!riddleSolved);
         }
-
     }
 }
