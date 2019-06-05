@@ -33,8 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxInput = new System.Windows.Forms.TextBox();
             this.buttonGuess = new System.Windows.Forms.Button();
-            this.labelTrySmallerNumber = new System.Windows.Forms.Label();
-            this.labeNumberGuessed = new System.Windows.Forms.Label();
+            this.labelWonLost = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -54,6 +53,7 @@
             this.buttonRestart.TabIndex = 1;
             this.buttonRestart.Text = "Sākt no jauna";
             this.buttonRestart.UseVisualStyleBackColor = true;
+            this.buttonRestart.Click += new System.EventHandler(this.ButtonRestart_Click);
             // 
             // label2
             // 
@@ -81,31 +81,21 @@
             this.buttonGuess.UseVisualStyleBackColor = true;
             this.buttonGuess.Click += new System.EventHandler(this.ButtonGuess_Click);
             // 
-            // labelTrySmallerNumber
+            // labelWonLost
             // 
-            this.labelTrySmallerNumber.AutoSize = true;
-            this.labelTrySmallerNumber.Location = new System.Drawing.Point(79, 107);
-            this.labelTrySmallerNumber.Name = "labelTrySmallerNumber";
-            this.labelTrySmallerNumber.Size = new System.Drawing.Size(108, 13);
-            this.labelTrySmallerNumber.TabIndex = 5;
-            this.labelTrySmallerNumber.Text = "Mēģini mazaku skaiti!";
-            // 
-            // labeNumberGuessed
-            // 
-            this.labeNumberGuessed.AutoSize = true;
-            this.labeNumberGuessed.Location = new System.Drawing.Point(79, 107);
-            this.labeNumberGuessed.Name = "labeNumberGuessed";
-            this.labeNumberGuessed.Size = new System.Drawing.Size(102, 13);
-            this.labeNumberGuessed.TabIndex = 5;
-            this.labeNumberGuessed.Text = "Jūs uzminējat skaitli!";
+            this.labelWonLost.AutoSize = true;
+            this.labelWonLost.Location = new System.Drawing.Point(77, 99);
+            this.labelWonLost.Name = "labelWonLost";
+            this.labelWonLost.Size = new System.Drawing.Size(108, 13);
+            this.labelWonLost.TabIndex = 5;
+            this.labelWonLost.Text = "Mēģini mazaku skaiti!";
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(306, 145);
-            this.Controls.Add(this.labeNumberGuessed);
-            this.Controls.Add(this.labelTrySmallerNumber);
+            this.Controls.Add(this.labelWonLost);
             this.Controls.Add(this.buttonGuess);
             this.Controls.Add(this.textBoxInput);
             this.Controls.Add(this.label2);
@@ -125,7 +115,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxInput;
         private System.Windows.Forms.Button buttonGuess;
-        private System.Windows.Forms.Label labelTrySmallerNumber;
-        private System.Windows.Forms.Label labeNumberGuessed;
+        private System.Windows.Forms.Label labelWonLost;
     }
 }

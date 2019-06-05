@@ -12,17 +12,36 @@ namespace PD4
 {
     public partial class Form3 : Form
     {
+        int inputNumber;
+        int numberToGuess;
         public Form3()
         {
             InitializeComponent();
-            this.labeNumberGuessed.Visible = false;
-            this.labelTrySmallerNumber.Visible = false;
-            this.labeNumberGuessed.Visible = false;
-            // uz klassi
+            ButtonRestart_Click(null, null);    //sak speli no jauna
         }
         private void ButtonGuess_Click(object sender, EventArgs e)
         {
-            double inputNumber = double.Parse(textBoxInput.Text);
+            inputNumber = int.Parse(textBoxInput.Text);
+            if (inputNumber < numberToGuess)
+            {
+                labelWonLost.Text = "Parak maz!";
+            }
+            else if (inputNumber > numberToGuess)
+            {
+                labelWonLost.Text = "Parak daudz!";
+            }
+            else
+            {
+                labelWonLost.Text = "Jus minejat skaitli!";
+            }
+            this.labelWonLost.Visible = true;
+        }
+
+        private void ButtonRestart_Click(object sender, EventArgs e)
+        {
+            numberToGuess = new Random().Next(1, 101);
+            textBoxInput.Text = "";
+            this.labelWonLost.Visible = false;
         }
     }
 }
