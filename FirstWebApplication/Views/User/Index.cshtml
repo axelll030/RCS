@@ -1,0 +1,20 @@
+﻿@model List<FirstWebApplication.Models.User>
+@{
+    ViewBag.Title = "Lietotaju saraksts";
+}
+
+<h2>Lietotaji</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Vards</th>
+        <th>Uzvards</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.FirstName</td>
+            <td>@user.LastName</td>
+        </tr>
+    }
+</table>
