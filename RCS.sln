@@ -33,6 +33,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PD4", "PD4\PD4.csproj", "{5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D6", "D6\D6.csproj", "{4490E066-E481-4891-840D-F0B49C6D3BB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka", "Biblioteka\Biblioteka.csproj", "{CA93C546-446A-47A3-A41E-BDADB9442E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbIzsaukums", "DbIzsaukums\DbIzsaukums.csproj", "{D1E735B1-BC8D-45DC-9F81-1942C197C8D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{253F2178-7CDF-4AC5-982E-C2B727A639D5}"
+	ProjectSection(SolutionItems) = preProject
+		Index_html.html = Index_html.html
+		Script.js = Script.js
+		Style.css = Style.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +110,14 @@ Global
 		{4490E066-E481-4891-840D-F0B49C6D3BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4490E066-E481-4891-840D-F0B49C6D3BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4490E066-E481-4891-840D-F0B49C6D3BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA93C546-446A-47A3-A41E-BDADB9442E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA93C546-446A-47A3-A41E-BDADB9442E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA93C546-446A-47A3-A41E-BDADB9442E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA93C546-446A-47A3-A41E-BDADB9442E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1E735B1-BC8D-45DC-9F81-1942C197C8D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E735B1-BC8D-45DC-9F81-1942C197C8D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E735B1-BC8D-45DC-9F81-1942C197C8D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E735B1-BC8D-45DC-9F81-1942C197C8D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

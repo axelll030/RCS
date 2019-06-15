@@ -15,6 +15,7 @@ namespace D6
         string enteredNumber = "";
         string operation = "";
         bool isOperationClicked = false;
+        int rez;
         public Form1()
         {
             InitializeComponent();
@@ -27,17 +28,21 @@ namespace D6
 
         private void ButtonEqual_Click(object sender, EventArgs e)
         {
-
+            equalClicked();
         }
 
         void operationClicked(string operation)
         {
+            isOperationClicked = true;
             if (enteredNumber == "")
             {
                 enteredNumber = textBox1.Text;
+                textBox1.Text = "";
             }
-            if (enteredNumber != null)
-            { }
+            else
+            {
+                equalClicked();
+            }
             /* 1. ja ievaditais skaitlis nav definets:
              * 1.1 sobrid attelotais skaitlis jasaglaba ka ievaditaisSkaitlis
              * 1.2. izveleta darbiba jasaglaba ka operation
@@ -46,10 +51,28 @@ namespace D6
         }
         void equalClicked()
         {
-           /* 1. parversievaditoskaitli uz int
-              2. parvers ievadlauka skaitli u int
-              3. aprekina reultatu strap abiem skaitliem izmantojot operation darbibu
-              4. atelo rez ievadlauka*/
+            int enteredNumberInt = int.Parse(enteredNumber);
+            int textBox1TextInt = int.Parse(textBox1.Text);
+            switch (operation)
+            {
+                case "+":
+                    rez = enteredNumberInt + textBox1TextInt;
+                    break;
+                case "-":
+                    rez = enteredNumberInt - textBox1TextInt;
+                    break;
+                case "*":
+                    rez = enteredNumberInt * textBox1TextInt;
+                    break;
+                case "/":
+                    rez = enteredNumberInt / textBox1TextInt;
+                    break;
+            }
+            textBox1.Text = rez.ToString();
+            /* 1. parversievaditoskaitli uz int
+               2. parvers ievadlauka skaitli uz int
+               3. aprekina reultatu strap abiem skaitliem izmantojot operation darbibu
+               4. atelo rez ievadlauka*/
         }
         void clearClicked()
         {
@@ -63,15 +86,16 @@ namespace D6
         void numberClicked(int number)
         {
             textBox1.Text += number; //ta ka vajag pievienot liekam PLUS VIENADS
-            switch (isOperationClicked)
+            if (isOperationClicked == true)
             {
-                case true:
-                    textBox1.Text = "";
-                    break;
-                default:
-                    break;
-                    
+                isOperationClicked = false;
+                textBox1.Text = "";
             }
+            else
+            {
+                //textBox1.Text += number;
+            }
+
             switch (textBox1.Text)
             {
                 case "0":

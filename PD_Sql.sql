@@ -50,15 +50,8 @@ ADD ClientId INT
 
 SELECT * FROM Pasutijums
 
-INSERT INTO Pasutijums(ClientId)
-VALUES(10000);
-INSERT INTO Pasutijums(ClientId)
-VALUES(10000);
-INSERT INTO Pasutijums(ClientId)
-VALUES(11000);
-INSERT INTO Pasutijums(ClientId)
-VALUES(10000);
-INSERT INTO Pasutijums(ClientId)
-VALUES(11000);
+UPDATE Pasutijums	--10.
+SET ClientId = 10000
+WHERE Id = 16005
 
-DELETE FROM Pasutijums WHERE Summa IS NULL
+DELETE FROM Pasutijums WHERE Summa IS NULL	--test delete
