@@ -20,7 +20,7 @@ namespace FirstWebApplication.Controllers
 
             return View(users);
         }
-        [HttpGet]//so meodi var izmantot tikai datu sanemsanai
+        [HttpGet]//so metodi var izmantot tikai datu sanemsanai
         public ActionResult Edit(int id)
         {
             User user = null;
