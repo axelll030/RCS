@@ -3,7 +3,7 @@
     height: 70px;
 }
 
-img[src="file://C:/Users/JEVG/source/repos/RCS/logo.png"] {
+img[src="logo.png"] {
     width: 200px;
     height: auto;
     position: absolute;
@@ -11,8 +11,18 @@ img[src="file://C:/Users/JEVG/source/repos/RCS/logo.png"] {
     left: 40px;
 }
 
-.navbar {
+.navbartop {
     box-shadow: 0px 1px 5px grey;
+}
+
+.navbarbot {
+    position: relative;
+    top: 50px;
+}
+
+.row-main {
+    position: relative;
+    top: 30px;
 }
 
 .navbar-right {
@@ -43,6 +53,7 @@ body {
 .panel-default {
     transition: transform .2s
 }
+
 .panel-default:hover {
-    transform: scale(1.02)
+    transform: scale(1.06)
 }

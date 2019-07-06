@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <title>Main</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -15,42 +16,42 @@
     <link rel="stylesheet" href="StyleNews.css" />
 </head>
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top navbartop">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand">
-                    <img class="brand-logo" alt="Brand" src="file://C:/Users/JEVG/source/repos/RCS/logo.png">
+                    <img class="brand-logo" alt="Brand" src="logo.png">
                 </a>
             </div>
             <div>
                 <ul class="list-inline navbar-right">
-                    <li><a href="#">Jaunākas tēmas</a></li>
+                    <li><a href="#">Jaunākas ziņas</a></li>
                     <li><a href="#">Tēmas</a></li>
                     <li><a href="#">Par mums</a></li>
                 </ul>
 
             </div>
         </div>
-    </nav>
+    </nav><br />
+
+    <nav class="navbar navbar-default navbarbot">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Latvijā</a></li>
+                <li><a href="#">Ārvalstīs</a></li>
+                <li><a href="#">Krimināls</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Auto</a></li>
+            </ul>
+        </div>
+    </nav><br /><br />
 
     <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
+        <div class="row row-main">
+            <div class="col-md-4">
                 <div class="panel panel-default">
-                    <div class="panel-body"><img src="file://C:/Users/JEVG/source/repos/RCS/fox.png" class="img-responsive" alt="Image"></div>
-                    <div class="panel-footer"><strong><a style="color:black" href="#">Breaking News</a></strong></div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel panel-default">
-                    <div class="panel-body"><img src="file://C:/Users/JEVG/source/repos/RCS/fox.png" class="img-responsive" alt="Image"></div>
-                    <div class="panel-footer"><strong><a style="color:black" href="#">Breaking News</a></strong></div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel panel-default">
-                    <div class="panel-body"><img src="file://C:/Users/JEVG/source/repos/RCS/fox.png" class="img-responsive" alt="Image"></div>
-                    <div class="panel-footer"><strong><a style="color:black" href="#">Breaking News</a></strong></div>
+                    <div class="panel-body"><img src="fox.png" class="img-responsive" alt="Image"></div>
+                    <div class="panel-footer"><h4>Breaking News</h4></div>
                 </div>
             </div>
         </div>

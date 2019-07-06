@@ -50,7 +50,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApp.Logic", "MovieApp.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NEWS HTML", "NEWS HTML", "{FA7DF03B-7AB9-4DB0-9B40-9462A9A8012B}"
 	ProjectSection(SolutionItems) = preProject
+		fox.png = fox.png
 		Index.html = Index.html
+		logo.png = logo.png
+		StyleNews.css = StyleNews.css
 	EndProjectSection
 EndProject
 Global
