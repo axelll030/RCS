@@ -46,6 +46,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{253F2178-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstWebApplication", "FirstWebApplication\FirstWebApplication.csproj", "{BCDEBE26-D250-4C4C-A379-4EEE1CC55AEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApp.Logic", "MovieApp.Logic\MovieApp.Logic.csproj", "{1574B498-5507-4B3A-AD7C-56AC604786B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NEWS HTML", "NEWS HTML", "{FA7DF03B-7AB9-4DB0-9B40-9462A9A8012B}"
+	ProjectSection(SolutionItems) = preProject
+		Index.html = Index.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,6 +131,10 @@ Global
 		{BCDEBE26-D250-4C4C-A379-4EEE1CC55AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCDEBE26-D250-4C4C-A379-4EEE1CC55AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCDEBE26-D250-4C4C-A379-4EEE1CC55AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1574B498-5507-4B3A-AD7C-56AC604786B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1574B498-5507-4B3A-AD7C-56AC604786B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1574B498-5507-4B3A-AD7C-56AC604786B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1574B498-5507-4B3A-AD7C-56AC604786B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

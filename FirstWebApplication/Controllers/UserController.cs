@@ -1,5 +1,6 @@
 ﻿using FirstWebApplication.Models;
 using System;
+using MovieApp.Logic.Managers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,11 +13,15 @@ namespace FirstWebApplication.Controllers
         // GET: User
         public ActionResult Index()
         {
-            List<User> users = new List<User>();
-            using (var db = new DB())
+            List<MovieModel> movies = new List<MovieModel>();
+
+            movies = MovieManager.GetMovies().Select(m => new MovieModel()
             {
-                users = db.Users.ToList();
-            }
+                Id = m.Id,
+                CinemaId = m.CinemaId,
+                Title = m.Title,
+                Year = m.Year,
+            }).ToList();
 
             return View(users);
         }
@@ -45,6 +50,7 @@ namespace FirstWebApplication.Controllers
 
                     db.SaveChanges();
                 }
+
             }
             return View(user);
         }
