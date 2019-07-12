@@ -1,0 +1,32 @@
+﻿@model List<NewsApp.Models.News>
+@{
+    ViewBag.Title = "Main";
+}
+
+
+<div class="container">
+<h2>Jaunākas ziņas</h2>
+    <div class="row row-main">
+        @{
+            var i = 0;
+            foreach (var news in Model)
+            {
+                {
+                    <div class="col-md-4 news-main">
+                        <div class="panel panel-default">
+                            <div class="panel-body"><img src=@news.Picture class="img-responsive" alt="Image"></div>
+                            <div class="panel-footer">
+                                <a class="news-topic"><h4>@Html.ActionLink(news.Name, "NewsText", "News", new {news.Id}, null)</h4></a>
+                            </div>
+                        </div>
+                    </div>
+                    if (++i == 9)
+                    {
+                        break;
+                    }
+                 }
+            }
+        }
+    </div>
+</div>
+

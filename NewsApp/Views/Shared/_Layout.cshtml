@@ -8,53 +8,26 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <nav class="navbar navbar-default navbar-fixed-top navbartop">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand">
-                    <img class="brand-logo" alt="Brand" src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png">
-                </a>
+                <div href="#" class="navbar-brand">
+                    <img class="brand-logo" alt="Brand" src="~/logo.png">
+                </div>
             </div>
             <div>
                 <ul class="list-inline navbar-right">
-                    <li><a href="#">Jaunākas ziņas</a></li>
-                    <li><a href="#">Tēmas</a></li>
-                    <li><a href="#">Par mums</a></li>
+                    <li>@Html.ActionLink("Jaunākas ziņas", "Main", "News")</li>
+                    <li>@Html.ActionLink("Tēmas", "Topics", "News")</li>
+                    <li>@Html.ActionLink("Par mums", "About", "News")</li>
                 </ul>
-
             </div>
         </div>
     </nav>
+
     <div>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

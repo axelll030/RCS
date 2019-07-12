@@ -139,10 +139,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\1.png" />
+    <Content Include="Content\2.png" />
+    <Content Include="Content\3.png" />
+    <Content Include="Content\4.png" />
+    <Content Include="Content\5.png" />
+    <Content Include="Content\6.png" />
+    <Content Include="Content\7.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fox.png" />
     <Content Include="Content\logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -175,7 +183,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\News\Topics.cshtml" />
+    <Content Include="Views\News\Main.cshtml" />
+    <Content Include="Views\News\About.cshtml" />
+    <Content Include="Views\News\NewsText.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
