@@ -11,7 +11,7 @@ namespace NewsApp.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Topic()
         {
-            News = new HashSet<News>();
+            News = new List<News>();
         }
 
         public int Id { get; set; }
@@ -20,7 +20,6 @@ namespace NewsApp.Models
         [StringLength(50)]
         public string Topics { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<News> News { get; set; }
+        public virtual List<News> News { get; set; }
     }
 }

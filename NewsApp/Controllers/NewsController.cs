@@ -1,6 +1,7 @@
 ﻿using NewsApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,7 +11,7 @@ namespace NewsApp.Controllers
     public class NewsController : Controller
     {
         [HttpGet]
-        public ActionResult Topics()
+        public ActionResult TopicList()
         {
             List<Topic> topics = new List<Topic>();
             using (var db = new News_DB())
@@ -46,5 +47,17 @@ namespace NewsApp.Controllers
                 return View(news);
             }
         }
+
+        [HttpGet]
+        public ActionResult Topics(int id)
+        {
+            List<News> news = new List<News>();
+            using (var db = new News_DB())
+            {
+                news = db.News.Where(x => x.TopicId == id).ToList();
+            }
+            return View(news);
+        }
     }
+
 }
