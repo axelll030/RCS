@@ -1,0 +1,33 @@
+﻿@model NewsApp.Models.News
+@{
+    ViewBag.Title = "NewNews";
+}
+
+
+
+@using (Html.BeginForm("NewNews", "News", FormMethod.Post))
+{
+    <div class="container" style="padding-left: 250px;padding-right: 250px;">
+        <h2>Jaunas ziņas pievienošana</h2>
+        <hr />
+        @Html.DropDownListFor(model => model.TopicId,
+                  new List<SelectListItem> {
+                       new SelectListItem { Value = "1" , Text = "Tēma: Latvijā" },
+                       new SelectListItem { Value = "2" , Text = "Tēma: Ārvalstīs" },
+                       new SelectListItem { Value = "3" , Text = "Tēma: Kriminālziņas" },
+                       new SelectListItem { Value = "4" , Text = "Tēma: Sports" },
+                       new SelectListItem { Value = "5" , Text = "Tēma: Auto" }
+                    },
+                  new { @class = "form-control", @style = "margin-bottom: 20px;" })
+
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+        @Html.TextBoxFor(c => c.Name, new { @class = "form-control", @style = "max-width: 670px; margin-bottom: 20px;", @placeholder = "Ziņas virsraksts" })
+        @Html.ValidationMessageFor(m => m.Author, "", new { @class = "text-danger" })
+        @Html.TextBoxFor(c => c.Author, new { @class = "form-control", @style = "max-width: 670px; margin-bottom: 20px;", @placeholder = "Autora vārds un uzvārds" })
+        @Html.ValidationMessageFor(m => m.Date, "", new { @class = "text-danger" })
+        @Html.TextBoxFor(c => c.Date, new { @class = "form-control", @style = "max-width: 670px; margin-bottom: 20px;", @placeholder = "Datums" })
+        @Html.ValidationMessageFor(m => m.Article, "", new { @class = "text-danger" })
+        @Html.TextAreaFor(c => c.Article, new { @class = "form-control", @rows = "10", @style = "max-width: 670px; resize:none", @placeholder = "Ziņa" })
+        <input class="btn btn-primary" type="submit" style="margin-top: 18px;margin-bottom: 10px;" value="Pievienot ziņu">
+    </div>
+}

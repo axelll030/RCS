@@ -1,18 +1,48 @@
-﻿@model NewsApp.Models.News
+﻿@model NewsApp.ViewModels.NewsComment
 @{
     ViewBag.Title = "NewsText";
 }
 
-    <div class="container">
-        <h2>@Model.Name</h2>
-        <table>
-            <tr>
-                <td><h4>@Model.Author</h4></></td>
-                <td><h4>@Model.Date.Value.ToString("dd/MM/yyyy")</h4></td>
-            </tr>
-        </table>
-        <hr />
-        <img src=@Model.Picture class="img-responsive" alt="Image">
-        <hr />
-        <p>@Model.Article</p>
+<div class="container" style="padding-left: 250px; padding-right: 250px">
+    <h2 style="top: 0px">@Model.News.Name 
+        <span class="badge" style="margin-top: -4px;">
+             @Model.Comments.Count
+        </span>
+        <span>
+            @Html.ActionLink(" ", "DeleteNews", "News", new { newsId = Model.News.Id }, new { @class = " glyphicon glyphicon-trash glyphicon-trash-newsname " })
+        </span>
+    </h2>
+
+    <img src=@Model.News.Picture class="img-rounded" style="height: 385px" alt="Image">
+
+    <div class="row">
+            <div class="col-sm-6"><h4 id="author">@Model.News.Author</h4></></div>
+            <div class="col-sm-6"><h4 id="date">@Model.News.Date.Value.ToString("dd/MM/yyyy")</h4></div>
     </div>
+    <hr style="margin-top: 0px;margin-bottom: 10px;" />
+    <p id="news-article">@Model.News.Article</p>
+</div>
+
+<div class="container" style="padding-left: 250px;padding-right: 250px;">
+    <hr style="margin-top: 0px;margin-bottom: 10px;" /> 
+    <h3>Komentāri:</h3>
+    @foreach (var comment in Model.Comments)
+    {
+        <div class="row" style="margin-top: -25px;">
+                <div class="col-sm-11"><h3 id="Comment-name">@comment.Name</h3></div>
+                <div class="col-sm-1">@Html.ActionLink(" ", "DeleteComment", "News", new { commentId = comment.Id, newsId = comment.NewsId }, new { @class = " glyphicon glyphicon-trash " })</div>
+        </div>
+        <div class="well well-lg"><p id="comments">@comment.Comments</p></div>
+    }
+</div>
+
+
+@using (Html.BeginForm("NewComment", "News", FormMethod.Post))
+{
+    <div class="container" style="padding-left: 250px;padding-right: 250px;">
+            @Html.TextBoxFor(c => c.NewComment.Name, new { @class = "form-control", @style = "max-width: 670px; margin-bottom: 20px;", @placeholder = "Vārds" })
+            @Html.TextAreaFor(c => c.NewComment.Comments, new { @class="form-control", @rows="3", @style="max-width: 670px; resize:none", @placeholder="Komentārs"})
+            @Html.HiddenFor(c=>c.NewComment.NewsId)
+            <input class="btn btn-primary" type="submit" style="margin-top: 18px;margin-bottom: 10px;" value="Pievienot">
+    </div>
+}

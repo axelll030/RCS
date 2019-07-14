@@ -1,25 +1,28 @@
-﻿@*@model List<NewsApp.Models.Topic>*@
-@model List<NewsApp.Models.News>
+﻿@model NewsApp.ViewModels.MyModel
 @{
     ViewBag.Title = "Topics";
 }
 
-@*<nav class="navbar navbar-default" id="navbar-topic">
+<nav class="navbar navbar-default" id="navbar-topic">
     <div class="container-fluid">
         <ul class="nav navbar-nav" style="position:relative; left: -22px;">
-            @foreach (var topic in Model)
+            @foreach (var topic in Model.Topics)
             {
-                <li id="topic-hover"><a href="#"><strong>@topic.Topics</strong></a></li>      
+            <li id="topic-hover">
+                @Html.ActionLink(topic.Topic1, "Topics", "News", new { topic.Id }, null)
+            </li>      
             }
         </ul>
     </div>
-</nav>*@
+</nav>
 
 <div class="container">
-    <h2>Jaunākas ziņas</h2>
+    <h2>
+        @Model.Topic.Topic1
+    </h2>
     <div class="row row-main">
         @{
-            foreach (var news in Model)
+            foreach (var news in Model.News)
             {
                 {
                     <div class="col-md-4 news-main">

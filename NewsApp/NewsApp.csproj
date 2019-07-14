@@ -128,24 +128,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\News_DB.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\MyModel.cs" />
+    <Compile Include="ViewModels\NewsComment.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\1.png" />
-    <Content Include="Content\2.png" />
-    <Content Include="Content\3.png" />
-    <Content Include="Content\4.png" />
-    <Content Include="Content\5.png" />
-    <Content Include="Content\6.png" />
-    <Content Include="Content\7.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -180,13 +175,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\News\Topics.cshtml" />
     <Content Include="Views\News\Main.cshtml" />
     <Content Include="Views\News\About.cshtml" />
     <Content Include="Views\News\NewsText.cshtml" />
+    <Content Include="Views\News\NewNews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

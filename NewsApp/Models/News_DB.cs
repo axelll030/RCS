@@ -4,7 +4,6 @@ namespace NewsApp.Models
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-    using System.Collections.Generic;
 
     public partial class News_DB : DbContext
     {
@@ -13,6 +12,7 @@ namespace NewsApp.Models
         {
         }
 
+        public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<News> News { get; set; }
         public virtual DbSet<Topic> Topics { get; set; }
 
@@ -21,6 +21,11 @@ namespace NewsApp.Models
             modelBuilder.Entity<News>()
                 .Property(e => e.Article)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<News>()
+                .HasMany(e => e.Comments)
+                .WithRequired(e => e.News)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Topic>()
                 .HasMany(e => e.News)

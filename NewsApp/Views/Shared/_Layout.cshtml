@@ -11,15 +11,16 @@
     <nav class="navbar navbar-default navbar-fixed-top navbartop">
         <div class="container-fluid">
             <div class="navbar-header">
-                <div href="#" class="navbar-brand">
-                    <img class="brand-logo" alt="Brand" src="~/logo.png">
+                <div class="navbar-brand">
+                    <a href="http://localhost:57797"><img class="brand-logo" alt="Brand" src="~/logo.png"></a>
                 </div>
             </div>
             <div>
                 <ul class="list-inline navbar-right">
-                    <li>@Html.ActionLink("Jaunākas ziņas", "Main", "News")</li>
-                    <li>@Html.ActionLink("Tēmas", "Topics", "News", new { id=1}, null)</li>
-                    <li>@Html.ActionLink("Par mums", "About", "News")</li>
+                    <li id="main-selector">@Html.ActionLink("Jaunākas ziņas", "Main", "News")</li>
+                    <li id="main-selector">@Html.ActionLink("Tēmas", "Topics", "News", new { id = 1 }, null)</li>
+                    <li id="main-selector">@Html.ActionLink("Par mums", "About", "News")</li>
+                    <li id="main-selector"><span id="icon1" class="glyphicon glyphicon-list-alt"></span>@Html.ActionLink("Pievienot ziņu", "NewNews", "News")</li>
                 </ul>
             </div>
         </div>
